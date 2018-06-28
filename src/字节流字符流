@@ -1,0 +1,19 @@
+1 字节流
+1） InputStream、OutputStream
+2)  EOF = End 读到-1就读到结尾
+3） 输入流基本方法
+    int b = in.read(); 读区一个字节无符号填充int第八位
+    in.read(byte[] buf) 读区数据填充到字节数组buf
+    in.read(byte[] buf, int start, int size)
+4)  输出流基本方法
+    out.write(int b) 写出一个byte到流， b的低八位
+    out.write(byte[] buf) 将buf字节数组都写入到流
+    out.write(byte[] buf, int start, int size)
+
+5) FileInputStream --> 具体实现了在文件上读取数据
+6）FileOutPutStream 实现了向文件写出byte数据的方法
+
+DataOutPutStream doc = new DataOutputStream(new FileOutPutStream(file));
+doc.writeInt(10);
+doc.writeUTF("中国"）;
+doc.writeLong...
