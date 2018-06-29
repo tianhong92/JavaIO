@@ -9,3 +9,29 @@
     out.write(int b) 写出一个byte到流， b的低八位
     out.write(byte[] buf) 将buf字节数组都写入到流
     out.write(byte[] buf, int start, int size)
+
+5) FileInputStream --> 具体实现了在文件上读取数据
+6）FileOutPutStream 实现了向文件写出byte数据的方法
+
+7）DataOutPutStream doc = new DataOutputStream(new FileOutPutStream(file));
+doc.writeInt(10);
+doc.writeUTF("中国"）;
+doc.writeLong...
+
+8）BufferedInputStream & BufferedOutputStream
+
+
+2 字符流
+1) 编码问题
+2）认识文本和文本文件
+java的文本（char)是16位无符号整数， 是字符的unicode编码（双字节编码）
+文件是byte的数据序列
+文本文件是char按照某种编码方式序列化为byte的存储结果
+InputStreamReader 完成byte流到char流， 按照编码解析
+Out 按照编码解析putStreamWriter char流到byte流
+
+FileReader/FileWriter
+字符流过滤器
+BufferedWriter
+BufferedReader ---> readLine 一次读一行
+BufferWriter   ---> 一次写一行
